@@ -36,11 +36,11 @@ jobs:
           java-version: 19
 
       - name: Full build
-        if: ${{ matrix.full-build }}
+        if: matrix.full-build
         run: ./gradlew build
 
       - name: File system check
-        if: $${{ !matrix.full-build }}
+        if: "!matrix.full-build"
         run: ./gradlew :kotlinpoet:check
 
   build-docs:
