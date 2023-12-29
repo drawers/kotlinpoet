@@ -41,7 +41,7 @@ jobs:
 
       - name: File system check
         if: "!matrix.full-build"
-        run: ./gradlew :kotlinpoet:check
+        run: ./gradlew :kotlinpoet:allTests
 
   build-docs:
     runs-on: ubuntu-latest
